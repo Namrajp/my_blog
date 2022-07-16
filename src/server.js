@@ -5,7 +5,23 @@ var dotenv = require("dotenv");
 dotenv.config();
 
 import path from "path";
-
+[
+  {
+    name: "learn-react",
+    upvotes: 0,
+    comments: [],
+  },
+  {
+    name: "learn-node",
+    upvotes: 0,
+    comments: [],
+  },
+  {
+    name: "my-thoughts-on-resumes",
+    upvotes: 0,
+    comments: [],
+  },
+];
 const app = express();
 app.use(express.static(path.join(__dirname, "/build")));
 
