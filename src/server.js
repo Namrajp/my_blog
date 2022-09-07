@@ -28,7 +28,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, "/build")));
 
 app.use(bodyParser.json());
-var url = process.env.MONGO_DB_URI;
+var url = process.env.MONGODB_URI;
 const withDB = async (operations, res) => {
   try {
     const client = await MongoClient.connect(url, {
