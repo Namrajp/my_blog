@@ -51,4 +51,5 @@ Note: babel used to be compatible with es6 syntax and modules.
 Add Procfile with content:- web: npm start    
 add empty package.json oR with "start: node src/server.js". We donot need nodemon on heroku.    
 Add PORT var with "process.env.PORT || 8000"   
-Add a Buildpack - node buildpack   
+Add a Buildpack - node buildpack
+Adding Configvars in Settings, Here using values from .env in node apps
