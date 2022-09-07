@@ -45,7 +45,7 @@ auto update using nodemon
 npm install --save-dev nodemon
 npx nodemon --exec npx babel-node src/server.js
 ```
-
+Note: babel used to be compatible with es6 syntax and modules.
 ### Deploy on Heroku:
 
 Add Procfile with content:- web: npm start    
