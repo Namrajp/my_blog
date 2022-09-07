@@ -1,10 +1,12 @@
-import express from "express";
-import bodyParser from "body-parser";
-import { MongoClient } from "mongodb";
+// const cool = require("cool-ascii-faces");
+const express = require("express");
+const bodyParser = require("body-parser");
+const { MongoClient } = require("mongodb");
 var dotenv = require("dotenv");
 dotenv.config();
+const PORT = process.env.PORT || 8000;
 
-import path from "path";
+const path = require("path");
 [
   {
     name: "learn-react",
@@ -100,4 +102,4 @@ app.post("/api/articles/:name/comment", async (req, res) => {
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "/build/index.html"));
 });
-app.listen(8000, () => console.log("Listening on port 8000"));
+app.listen(PORT, () => console.log("Listening on port 8000"));
